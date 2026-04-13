@@ -1,0 +1,54 @@
+<svg width="192" height="48" viewBox="0 0 192 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="SUNY LLC">
+  <defs>
+    <linearGradient id="iconGrad" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#3B82F6"/>
+      <stop offset="100%" stop-color="#1D4ED8"/>
+    </linearGradient>
+    <filter id="sGlow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="1.2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Icon background -->
+  <rect width="48" height="48" rx="13" fill="url(#iconGrad)"/>
+  <rect x="0.75" y="0.75" width="46.5" height="46.5" rx="12.5" stroke="white" stroke-opacity="0.12" stroke-width="1.5" fill="none"/>
+  <rect x="1" y="1" width="46" height="19" rx="12" fill="white" fill-opacity="0.09"/>
+  <circle cx="24" cy="24" r="18.5" stroke="white" stroke-opacity="0.06" stroke-width="1" fill="none"/>
+
+  <!-- S lettermark -->
+  <path
+    d="M 36 15.5 C 36 8.5 12 8.5 12 20 C 12 27.5 36 20.5 36 32 C 36 39.5 12 39.5 12 32.5"
+    stroke="white"
+    stroke-width="3.8"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    filter="url(#sGlow)"
+  />
+
+  <!-- S endpoint accent dots -->
+  <circle cx="36" cy="15.5" r="2.2" fill="white" fill-opacity="0.55"/>
+  <circle cx="12" cy="32.5" r="2.2" fill="white" fill-opacity="0.55"/>
+
+  <!-- Corner accent dots -->
+  <circle cx="6.5" cy="6.5" r="1.2" fill="white" fill-opacity="0.15"/>
+  <circle cx="41.5" cy="6.5" r="1.2" fill="white" fill-opacity="0.15"/>
+  <circle cx="6.5" cy="41.5" r="1.2" fill="white" fill-opacity="0.15"/>
+  <circle cx="41.5" cy="41.5" r="1.2" fill="white" fill-opacity="0.15"/>
+
+  <!-- Wordmark -->
+  <text x="62" y="27" font-family="'Plus Jakarta Sans', Inter, sans-serif" font-weight="800" font-size="19.5" letter-spacing="0.4">
+    <tspan fill="#F1F5F9">SUNY</tspan>
+    <tspan dx="6" fill="#60A5FA" font-weight="700">LLC</tspan>
+  </text>
+
+  <!-- Accent underline -->
+  <rect x="62" y="31" width="110" height="1" rx="0.5" fill="#2563EB" fill-opacity="0.35"/>
+
+  <!-- Tagline -->
+  <text x="63" y="42" font-family="Inter, sans-serif" font-weight="400" font-size="8.5" fill="#64748B" letter-spacing="2.6">RETAIL PARTNER</text>
+</svg>
