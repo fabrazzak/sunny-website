@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
+import Script from "next/script";
 
 /* ─── SEO Metadata ─────────────────────────────────────────── */
 export const metadata: Metadata = {
@@ -79,6 +80,18 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://images.unsplash.com" />
       </head>
       <body className="antialiased">
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-SZSM7W8W5P"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-SZSM7W8W5P');
+          `}
+        </Script>
         <div className="noise-overlay" aria-hidden="true" />
         {children}
       </body>

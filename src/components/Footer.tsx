@@ -27,7 +27,7 @@ export default function Footer() {
   return (
     <footer className="relative bg-navy-950 border-t border-white/5 pt-16 pb-8 px-6 overflow-hidden">
       {/* BG accent */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-px bg-gradient-to-r from-transparent via-brand-blue/30 to-transparent" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-px bg-gradient-to-r from-<transparent via-brand-blue/30 to-transparent" />
 
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10 mb-14">
@@ -35,7 +35,8 @@ export default function Footer() {
           {/* ── Brand Column ── */}
           <div className="sm:col-span-2 lg:col-span-1">
             <div className="mb-4">
-              <Logo />
+              {/* <Logo /> */}
+            <img className="w-40 " src="/logo-png.png" alt="Company Logo" />
             </div>
             <p className="text-slate-500 text-sm leading-relaxed mb-5">
               A premier Amazon wholesale and distribution firm. We protect,
@@ -90,9 +91,9 @@ export default function Footer() {
               <div className="flex gap-3">
                 <MapPin size={15} className="text-brand-blue/70 mt-0.5 flex-shrink-0" />
                 <p className="text-slate-400 text-sm leading-relaxed">
-                  30 N Gould St Ste R<br />
-                  Sheridan, WY 82801<br />
-                  United States
+                  3801 N Capital of Texas Hwy <br />
+                  Ste E240-3863<br />              
+                  Austin, TX 78746 USA
                 </p>
               </div>
               <div className="flex gap-3">
@@ -118,10 +119,7 @@ export default function Footer() {
           </p>
           <div className="flex items-center gap-2">
             <div className="h-4 w-px bg-white/10" />
-            <p className="text-slate-700 text-xs">
-              Built with{" "}
-              <span className="text-brand-blue/60">Next.js</span>
-            </p>
+            
           </div>
         </div>
       </div>

@@ -4,12 +4,17 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { Mail, MapPin, Phone, Send, CheckCircle2, Loader2 } from "lucide-react";
+import emailjs from "@emailjs/browser";
+
+const EMAILJS_SERVICE_ID = "mdsunyllc@gmail.com";
+const EMAILJS_TEMPLATE_ID = "template_vfdjb4n";
+const EMAILJS_PUBLIC_KEY = "RSg4mfgeqBaAWbEkD";
 
 const contactInfo = [
   {
     icon: MapPin,
     label: "Office Address",
-    value: "Northwest Registered Agent\n30 N Gould St Ste R\nSheridan, WY 82801, USA",
+    value: "30 N Gould St Ste R\nSheridan, WY 82801, USA",
   },
   {
     icon: Mail,
@@ -43,9 +48,23 @@ export default function ContactSection() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus("loading");
-    // Simulate async send
-    await new Promise((r) => setTimeout(r, 1500));
-    setStatus("success");
+    try {
+      await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        {
+          from_name: form.name,
+          brand_name: form.brand,
+          from_email: form.email,
+          phone: form.phone,
+          message: form.message,
+        },
+        EMAILJS_PUBLIC_KEY
+      );
+      setStatus("success");
+    } catch {
+      setStatus("error");
+    }
   };
 
   return (
@@ -269,6 +288,16 @@ export default function ContactSection() {
                       </>
                     )}
                   </button>
+
+                  {status === "error" && (
+                    <p className="text-center text-red-400 text-sm">
+                      Something went wrong. Please try again or email us directly at{" "}
+                      <a href="mailto:info@sunyllc.com" className="underline">
+                        info@sunyllc.com
+                      </a>
+                      .
+                    </p>
+                  )}
 
                   <p className="text-center text-slate-600 text-xs">
                     By submitting, you agree to our privacy policy. We never

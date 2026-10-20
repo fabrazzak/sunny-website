@@ -46,7 +46,7 @@ export default function HeroSection() {
           className="inline-flex items-center gap-2 bg-brand-blue/10 border border-brand-blue/25 rounded-full px-4 py-1.5 text-xs sm:text-sm text-brand-light font-medium mb-8"
         >
           <span className="w-2 h-2 rounded-full bg-brand-blue animate-pulse" />
-          Authorized Amazon Retail Partner · USA Based
+          Authorised Online Retail partner - UK & US based
         </motion.div>
 
         {/* Headline */}
@@ -55,12 +55,12 @@ export default function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.65, delay: 0.1 }}
           className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-800 text-white leading-[1.08] tracking-tight mb-6"
-        >
-          Your Strategic
+        >Your Strategic
+          
           <br />
-          <span className="text-gradient">Retail Partner</span>
+          <span className="text-gradient">Retail partner Helping Brands</span>
           <br />
-          on Amazon
+           Grow on Amazon
         </motion.h1>
 
         {/* Sub-headline */}

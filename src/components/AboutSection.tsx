@@ -91,7 +91,7 @@ export default function AboutSection() {
               <span className="text-white font-medium">
                 sustainable, long-term partnerships
               </span>{" "}
-              with manufacturers.
+              with  Brands and Wholesale distributors.
             </motion.p>
 
             <motion.p

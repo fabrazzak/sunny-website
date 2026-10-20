@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import Logo from "./Logo";
+
 
 const navLinks = [
   { label: "Home",         href: "#home" },
@@ -84,9 +84,10 @@ export default function Navbar() {
           <button
             onClick={() => scrollTo("#home")}
             className="relative group flex items-center"
-          >
-            <div className="absolute -inset-3 bg-brand-blue/10 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-            <Logo className="relative" />
+          >           
+          <div className="w-20 md:w-[120px]">
+             <img src="/logo-png.png" alt="sunny-llc-logo"  className="w-20  md:w-[120px]" />
+          </div>
           </button>
 
           {/* ── Desktop nav ── */}
@@ -94,7 +95,7 @@ export default function Navbar() {
             {navLinks.map((link) => {
               const isActive = activeSection === link.href.slice(1);
               return (
-                <button
+               <button
                   key={link.href}
                   onClick={() => scrollTo(link.href)}
                   className={`relative px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 ${
